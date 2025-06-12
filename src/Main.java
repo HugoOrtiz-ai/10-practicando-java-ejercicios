@@ -30,6 +30,17 @@ public class Main {
             opcion = teclado.nextInt();
 
             switch (opcion) {
+                case 1:
+                    System.out.println("Ingresa un número:");
+                    double numeroUsuario = teclado.nextDouble();
+
+                    if (numeroUsuario % 2 == 0) {
+                        System.out.println(String.format("Número del usuario = %.2f\nTu número es par." , numeroUsuario));
+                    } else {
+                        System.out.println(String.format("Número del usuario = %.2f\nTu número es impar." , numeroUsuario));
+                    }
+                    break;
+
                 case 11:
                     System.out.println("Saliendo del Programa de ejercicios con Java.\n¡Gracias por tu visita, Hasta pronto!");
                     break;
