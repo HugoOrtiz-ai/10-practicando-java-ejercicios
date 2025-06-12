@@ -31,13 +31,40 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Ingresa un número:");
-                    double numeroUsuario = teclado.nextDouble();
+                    boolean volverAlMenu1 = false;
 
-                    if (numeroUsuario % 2 == 0) {
-                        System.out.println(String.format("Número del usuario = %.2f\nTu número es par." , numeroUsuario));
-                    } else {
-                        System.out.println(String.format("Número del usuario = %.2f\nTu número es impar." , numeroUsuario));
+                    while (! volverAlMenu1) {
+                        System.out.println("\nIngresa un número:");
+                        double numeroUsuario = teclado.nextDouble();
+
+                        if (numeroUsuario == 0){
+                            volverAlMenu1 = true;
+                        } else if (numeroUsuario % 2 == 0) {
+                            System.out.println(String.format("Número del usuario = %.2f\nTu número es par." , numeroUsuario));
+                        } else {
+                            System.out.println(String.format("Número del usuario = %.2f\nTu número es impar." , numeroUsuario));
+                        }
+                    }
+                    break;
+
+                case 2:
+                    boolean volverAlMenu2 = false;
+
+                    while (! volverAlMenu2) {
+                        System.out.println("\nIngrese el promedio final de alumn@:");
+                        double media = teclado.nextDouble();
+
+                        if (media == 0) {
+                            volverAlMenu2 = true;
+                        } else if (media < 5) {
+                            System.out.println(String.format("El estudiante tuvo un promedio de %.1f\nFue REPROBAD@." , media));
+                        } else if (media >= 5 && media < 7) {
+                            System.out.println(String.format("El estudiante tuvo un promedio de %.1f\nESTA EN RECUPERACIÓN." , media));
+                        } else if (media >= 7 && media <= 10) {
+                            System.out.println(String.format("El estudiante tuvo un promedio de %.1f\nFue APROBAD@." , media));
+                        } else if (media > 10) {
+                            System.out.println(String.format("El promedio %.1f no es válido.\nVerifique el promedio e intente de nuevo." , media));
+                        }
                     }
                     break;
 
