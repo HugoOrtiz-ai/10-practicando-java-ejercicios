@@ -86,6 +86,32 @@ public class Main {
                     }
                     break;
 
+                case 4:
+                    boolean volverAlMenu4 = false;
+
+                    while (! volverAlMenu4) {
+                        System.out.println("\nIngrese su primer número diferente de 0 o ingrese 0 para volver al menú inicial:");
+                        double num1 = teclado.nextDouble();
+
+                        if (num1 == 0) {
+                            volverAlMenu4 = true;
+                        } else if (num1 != 0) {
+                            System.out.println("Ingrese su segundo número:");
+                            double num2 = teclado.nextDouble();
+
+                            if (num1 < num2) {
+                                System.out.println(String.format("Primer numero ingresado: %.2f\nSegundo número ingresado: %.2f" , num1 , num2));
+                                System.out.println(String.format("\nEl número %.2f es mayor" , num2));
+                            } else if (num1 > num2){
+                                System.out.println(String.format("Primer numero ingresado: %.2f\nSegundo número ingresado: %.2f" , num1 , num2));
+                                System.out.println(String.format("\nEl número %.2f es mayor" , num1));
+                            } else {
+                                System.out.println("Ambos números son iguales.");
+                            }
+                        }
+                    }
+                    break;
+
                 case 11:
                     System.out.println("Saliendo del Programa de ejercicios con Java.\n¡Gracias por tu visita, Hasta pronto!");
                     break;
