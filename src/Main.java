@@ -68,6 +68,24 @@ public class Main {
                     }
                     break;
 
+                case 3:
+                    boolean volverAlMenu3 = false;
+
+                    while (! volverAlMenu3) {
+                        System.out.println("\nIngrese su contraseña de empleado para accesar al sistema:");
+                        int contrasena = teclado.nextInt();
+                        int contrasenaCorrecta = 123456;
+
+                        if (contrasena == 0) {
+                            volverAlMenu3 = true;
+                        } else if (contrasena == contrasenaCorrecta) {
+                            System.out.println("¡Acceso permitido!");
+                        } else {
+                            System.out.println(String.format("¡Acceso denegado!\nLa contraseña ingresada: %d es incorrecta.\nVerifique su contraseña e intente nuevamente." , contrasena));
+                        }
+                    }
+                    break;
+
                 case 11:
                     System.out.println("Saliendo del Programa de ejercicios con Java.\n¡Gracias por tu visita, Hasta pronto!");
                     break;
