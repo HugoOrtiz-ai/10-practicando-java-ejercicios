@@ -34,7 +34,7 @@ public class Main {
                     boolean volverAlMenu1 = false;
 
                     while (! volverAlMenu1) {
-                        System.out.println("\nIngresa un número:");
+                        System.out.println("\nIngresa un número o presione 0 para volver al menú principal:");
                         double numeroUsuario = teclado.nextDouble();
 
                         if (numeroUsuario == 0){
@@ -51,7 +51,7 @@ public class Main {
                     boolean volverAlMenu2 = false;
 
                     while (! volverAlMenu2) {
-                        System.out.println("\nIngrese el promedio final de alumn@:");
+                        System.out.println("\nIngrese el promedio final de alumn@ o presione 0 para volver al menú principal:");
                         double media = teclado.nextDouble();
 
                         if (media == 0) {
@@ -72,7 +72,7 @@ public class Main {
                     boolean volverAlMenu3 = false;
 
                     while (! volverAlMenu3) {
-                        System.out.println("\nIngrese su contraseña de empleado para accesar al sistema:");
+                        System.out.println("\nIngrese su contraseña de empleado para accesar al sistema o presione 0 para volver al menú principal:");
                         int contrasena = teclado.nextInt();
                         int contrasenaCorrecta = 123456;
 
